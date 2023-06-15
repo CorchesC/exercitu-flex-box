@@ -1,0 +1,125 @@
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+img {
+    display: block;
+    height:250px;
+    width: 450px;
+}
+.header {   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+  
+    margin: auto;
+}
+.header-student-name {
+    text-align: center;
+    font-size: 30px;
+  
+    margin-bottom: 4%;
+}
+.header-items {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 1% 1% 1%;
+    flex-basis: 40px;
+    background-color: white;
+
+}
+.student-image {
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+    align-items: center;
+}
+.student-description {
+    margin: auto;
+    text-align: center;
+    flex-basis: 60px;
+    margin: 5% 10% 2% 10%;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio-titles {
+    font-weight: bold;
+}
+.portfolio-texts {
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+}
+.footer-contact-button {
+    align-self: center;   
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.footer-info-text {
+    text-align: center;
+}
+.contact-details {
+    align-self: center;
+}
+.phone-block {
+    order: 2;
+    flex-shrink: 100;
+}
+.phone-number {
+    order: 2;
+    font-weight: bold;
+}
+.email-block {
+    order: 3;
+}
+.email {
+    order: 3;
+    font-weight: bold;
+}
+.footer-student-name {
+    align-self: flex-start;
+    order: 5;
+}
+.back-to-top {
+    align-self: flex-end;
+    order: 5;
+}
+/* tableta */
+
+@media (min-width: 1400px) {
+    .header {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .header-student-name {
+        order: 1;
+    }
+    .header-items {
+        order: 1;
+    }
+    .student-image {
+        order: 2;
+        margin: auto;
+    }
+    .student-description {
+        order: 2;
+    }
+    .portfolio {
+        flex-direction: row;
+        width: fit-content;
+    }
+}
+
+/* calculator */
