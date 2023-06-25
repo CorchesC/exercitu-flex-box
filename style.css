@@ -27,7 +27,6 @@ img {
     text-transform: uppercase;
     font-weight: bold;
     margin: 0 1% 1% 1%;
-    flex-basis: 40px;
     background-color: white;
 
 }
@@ -41,7 +40,6 @@ img {
 .student-description {
     margin: auto;
     text-align: center;
-    flex-basis: 60px;
     margin: 5% 10% 2% 10%;
 }
 
@@ -52,11 +50,11 @@ img {
 }
 .portfolio-titles {
     font-weight: bold;
+    text-align: center;
 }
 .portfolio-texts {
     text-align: center;
 }
-
 .footer {
     display: flex;
     flex-direction: column;
@@ -67,59 +65,199 @@ img {
     font-weight: bolder;
     text-transform: uppercase;
 }
+.portfolio-images {
+
+    width: 90%;
+
+}
 .footer-info-text {
     text-align: center;
 }
 .contact-details {
     align-self: center;
 }
+.phone-details {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    margin: 0 0 2%;
+}
 .phone-block {
     order: 2;
     flex-shrink: 100;
+    margin: 0 5%;
 }
 .phone-number {
     order: 2;
     font-weight: bold;
 }
+.email-details {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
 .email-block {
     order: 3;
+    margin: 0 5%;
 }
 .email {
     order: 3;
     font-weight: bold;
 }
-.footer-student-name {
-    align-self: flex-start;
-    order: 5;
+.footer-details {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    border: 2px solid red;
 }
-.back-to-top {
-    align-self: flex-end;
-    order: 5;
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
+.cards {
+    margin: auto;
+}
+.footer-tablet {
+    display:none;
+}
+.footer-pc {
+    display: none;
+}
+
 /* tableta */
 
-@media (min-width: 1400px) {
-    .header {
+@media (min-width: 676px) {
+  
+    /* header */
+
+    .nav-container{
+        display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 5% 0;
     }
-    .header-student-name {
-        order: 1;
+
+    .header-items{
+       text-align: center;
+       background-color: lightgray;
+       height: 10%;
     }
-    .header-items {
-        order: 1;
+
+    .profile {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 5% 0;
     }
     .student-image {
         order: 2;
-        margin: auto;
+        display: inline-block;
+        height: 20%;
+        width: 80%;
+        margin: 1% 1% 1% 1%;
     }
     .student-description {
-        order: 2;
+        font-size: larger;
+        margin: 1% 1% 1% 1%;
+
     }
+
+    /* main */
+
     .portfolio {
+        display: flex;
+        flex-direction: collum;
+        max-width: fit-content;
+    }
+    .cards-container {
+        display: flex;
         flex-direction: row;
-        width: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .cards{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        width: 40%;
+    }
+
+    .footer-details {
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .footer-student-name {
+        font-size: larger;
+        font-weight: bold;
+        width: 10%;
+    }
+    .footer-items {
+        font-size: larger;
+        font-weight: bold;
+        margin-left: 1%;
+    }
+    .footer-tablet {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-mobile {
+        display: none;
+    }
+    .footer-pc {
+        display: none;
     }
 }
 
 /* calculator */
+
+@media (min-width: 1400px) {
+    
+    .header {
+        height: 30%;
+        max-height: 30%;
+    }
+    .main-nav {
+        height: 30%;
+        width: 90%;
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .header-student-name {
+        align-self: flex-start;
+    }
+    .nav-container {
+        align-self: flex-end;
+    }
+    .header-items {
+        font-size: larger;
+        margin-right: 2%;
+    }
+    .profile {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 3%;
+        max-height: 30%;
+    }
+    .student-image {
+        max-height: 30%;
+        max-width: 20%;
+    }
+    .cards {
+        width: 30%;
+    }
+
+}
